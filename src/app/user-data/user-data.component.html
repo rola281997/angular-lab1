@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-8">
+          <input type="text" [value]='username1' (input) = 'username1 = $event.target.value' class="form-control">
+        </div>
+        <label  class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" [(ngModel)]='username2'>
+        </div>
+        <label  class="col-sm-2 col-form-label">Display Input Data:</label>
+        <div class="col-sm-8">
+            <h2>First Username is: {{username1}}</h2>
+            <h2>Second Username is: {{username2}}</h2>
+        </div>
+        <div class="col-sm-2" *ngIf="username1 || username2">
+            <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+        </div>
+      </div>
+    </div>
+</div>
